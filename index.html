@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2aee2ea5d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Slider</title>
+</head>
+<body>
+
+    <div class="carousel">
+
+        <div class="bg-box">
+            <!-- color boxes -->
+            <div class="bg active"></div>
+            <div class="bg"></div>
+            <div class="bg"></div>
+            <div class="bg"></div>
+        </div>
+
+        <div class="img-box">
+            <div class="img-list">
+                <div class="img-slider">
+
+                    <!-- Background Fruit Images -->
+                    <div class="img-item fruit active" style="--i:0;">
+                        <img src="./images/fruit1.png" alt="">
+                    </div>
+
+                    <div class="img-item fruit" style="--i:1;">
+                        <img src="./images/fruit2.png" alt="">
+                    </div>
+
+                    <div class="img-item fruit" style="--i:2;">
+                        <img src="./images/fruit3.png" alt="">
+                    </div>
+
+                    <div class="img-item fruit" style="--i:3;">
+                        <img src="./images/fruit4.png" alt="">
+                    </div>
+
+                    <!-- Can Images  -->
+                    <div class="img-item" style="--i:0;">
+                        <img src="./images/can1.png" alt="">
+                    </div>
+
+                    <div class="img-item" style="--i:1;">
+                        <img src="./images/can2.png" alt="">
+                    </div>
+
+                    <div class="img-item" style="--i:2;">
+                        <img src="./images/can3.png" alt="">
+                    </div>
+
+                    <div class="img-item" style="--i:3;">
+                        <img src="./images/can4.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-slider">
+                <h2 id="contenHead"></h2>
+                <p id="contentDes"></p>
+            </div>
+        </div>
+
+        <div class="large-text">
+            <h2>POWER</h2>
+        </div>
+
+        <div class="navigation">
+            <span class="prev-btn" onclick="prevBtn()"> 
+                <i class="fa-solid fa-chevron-left"></i>
+            </span>
+            <span class="next-btn" onclick="nextBtn()">
+                <i class="fa-solid fa-chevron-right"></i>
+            </span>
+        </div>
+
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

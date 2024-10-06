@@ -1,0 +1,185 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;    
+    overflow: hidden;
+}
+
+.carousel{
+    height: 100vh;
+}
+
+/* Background part */
+.bg-box .bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.bg-box .bg.active{
+    opacity: 1;
+}
+
+.bg-box .bg::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    filter: blur(200px);
+}
+
+.bg-box .bg:nth-child(1){
+    background: #cead19;
+
+}
+
+.bg-box .bg:nth-child(2){
+    background: rgb(37, 150, 249);
+    
+}
+
+.bg-box .bg:nth-child(3){
+    background: rgb(227, 9, 151);
+    
+}
+
+.bg-box .bg:nth-child(4){
+    background: #dc1010;
+    
+}
+
+
+
+
+.img-box{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1600px;
+    height: 1600px;
+    bottom: -960px;
+}
+
+.img-box .img-list{
+    height: inherit;
+    transform: rotate(90deg);
+}
+
+.img-list .img-slider{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.img-slider .img-item{
+    position: absolute;
+    left: 0;
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    transform-origin: 800px;
+}
+
+.img-item img{
+    transform: rotate(-90deg);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+
+/* floating Animation */
+@keyframes floating{
+    0%{
+        translate: 0;
+    }
+    50%{
+        translate: -10px;
+    }
+    100%{
+        translate: 0;
+    }
+}
+
+
+.img-item.fruit img{
+    transform: rotate(-90deg) translateY(-30%);
+    scale: 0;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: floating 2s infinite;
+}
+
+.img-item.fruit.active img{   
+    scale: 1;
+    transition-delay: .1s;
+}
+
+
+/* Comes to navigation buttons */
+.navigation{
+    position: absolute;
+    /* height: 100vh; */
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.navigation span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+/* Large Text */
+.large-text{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 700px;
+}
+
+.large-text h2{
+    font-size: 160px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: -55px;
+    user-select: none;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Info Slider part  */
+.info-box{
+    position: absolute;
+    right: 8%;
+    bottom: 5%;
+    width: 300px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    transition: ease-in-out;
+}
+
+.info-slider {
+    color: #fff;
+}
+
